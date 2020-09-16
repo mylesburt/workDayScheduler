@@ -42,3 +42,15 @@ function renderTime () {
         setTimeout("renderTime()", 1000);
 }
 renderTime();
+
+//Day-month array
+
+var dayMonthArray = [
+    "01",
+    "02/09",
+    "03/09",
+    "04/09",
+];
+document.getElementById("date").innerHTML = dayMonthArray[0] + "/09";
+
+ 
