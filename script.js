@@ -57,58 +57,99 @@ function renderTime () {
 }
 renderTime();
 
-//Day-month array
+//Local Storage
+//Tried using bits of lesson activites to try and piece something together, along with information online.
 
-// var dateText = "";
-
-
-var dayMonthArray = [
-    "00","01","02","03","04","05","07","08","09","10","11","12","13","14","15","16","17","18","19","20","21","22","23"
-];
+//Failed attempt 1
 
 /*
-dayMonthArray.forEach(dateArray);
-document.getElementById("date").innerHTML = dateText;
+var todoInput = document.querySelector("#inputRow1");
+var
+
+function init() {
+    // Get stored todos from localStorage
+    // Parsing the JSON string to an object
+    var storedTodos = JSON.parse(localStorage.getItem("inputRow1"));
+  
+    // If todos were retrieved from localStorage, update the todos array to it
+    if (storedTodos !== null) {
+      todos = storedTodos;
+    }
+  
+    // Render todos to the DOM
+    renderTodos();
+  }
+  
+  function storeTodos() {
+    // Stringify and set "todos" key in localStorage to todos array
+    localStorage.setItem("inputRow1", JSON.stringify(todos));
+  }
+  
+  // When form is submitted...
+  todoForm.addEventListener("buttonRow1", function(event) {
+    event.preventDefault();
+  
+    var todoText = todoInput.value.trim();
+  
+    // Return from function early if submitted todoText is blank
+    if (todoText === "") {
+      return;
+    }
+  
+    // Add new todoText to todos array, clear the input
+    todos.push(todoText);
+    todoInput.value = "";
+  
+    // Store updated todos in localStorage, re-render the list
+    storeTodos();
+    renderTodos();
+  });
 
 
-// for (var dateNum = 0; dateNum < dayMonthArray.length; dateNum++)
-
-
-function dateArray(value, index, array) {
-    dateText = dayMonthArray[0] + ":00";
-}
+// When a element inside of the todoList is clicked...
+todoInput.addEventListener("click", function(event) {
+    var element = event.target;
+  
+      // Store updated todos in localStorage, re-render the list
+      storeTodos();
+      renderTodos();
+    }
+  });
 */
 
 
-
-
-
+//Failed attempt 2
 
 /*
-var mulitRow = $("#timeblock");
+var rowStore1 = document.querySelector("#inputRow1");
+var storeBtn1 = document.querySelector("buttonRow1");
 
-for (var i = 0,i = dayMonthArray.length; i++) {
-    var newRow = $("<div class="row"><div class="col-2">
-      <p id="date"></p>
-    </div>
-    <div class="col">
-      <input>
-    </div>
-    <div class="col-2">
-      <button type="button" class="btn btn-outline-primary">Save</button>
-    </div>
-  </div> ")
+renderLastEntry();
+
+
+function renderLastEntry() {
+    var inputRow1 = localStorage.getItem("inputRow1");
 }
+
+var rowStorage1 = localStorage.getItem("rowStorage1");
+
+rowStore1.textContent = rowStorage1;
+
+storeBtn1.addEventListener("click", function () {
+    rowStore1.textContent = rowStorage1;
+
+    localStorage.setItem("rowStorage1", rowStorage1);
+});
 */
 
-//document.getElementById("date").innerHTML = dayMonthArray[0] + "/09";
 
-
-//repeating rows
+//Failed Attempt 3
 
 /*
-    for(i = 0;i<29;i++)
-    document.getElementById("timeblock").innerHTML;
- */
+var txtRow1 = document.getElementById("inputRow1").nodeValue;
 
- 
+document.getElementById("buttonRow1").addEventListener("click", saveRow1() {
+    txtRow1.localStorage.setItem("");
+});
+
+*/
